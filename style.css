@@ -1,0 +1,76 @@
+.cheek_container {
+    max-width: 167px;
+    padding: 21px 29px 30px 30px;
+    background-color: #FFFFFF;
+    border-radius: 10%;
+    box-shadow: 1px 1px 1px black;
+    margin-bottom: 40px;
+}
+
+.cheek_title {
+    margin: 0;
+    color: #333333;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.cheek_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.cheek_form label:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.cheek_form input {
+    display: none;
+}
+
+.cheek_form label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+    color: #333333;
+}
+
+.cheek_form span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #999999;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.cheek_form span::before {
+    content: url(./cheek.svg);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+input:checked+span::before {
+    opacity: 1;
+}
+
+input:checked+span {
+    opacity: 1;
+    border-color: #CCB26E;
+}
+
+
+/* Стили для селекта */
+
+.choices {
+    max-width: 176px;
+}
